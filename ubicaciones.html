@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ubicaciones | IAO Ingeniería Avante de Occidente</title>
+    <meta name="description" content="Nuestra ubicación corporativa en Jalisco, México.">
+    <!-- Manrope Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            orange: '#FC5220',
+                            dark: '#191817',
+                            gray: '#32373c',
+                            light: '#f9f9f9',
+                            border: '#E6E9EB'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Manrope', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Manrope', sans-serif; color: #000; background-color: #191817; }
+        .mega-menu { opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.3s ease; }
+        .nav-item:hover .mega-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        .nav-link { color: #000; font-weight: 600; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.05em; transition: color 0.3s ease; }
+        .nav-link:hover, .nav-item:hover > .nav-link { color: #FC5220; }
+        .float-wpp { transition: transform 0.3s, background-color 0.3s; }
+        .float-wpp:hover { transform: translateY(-5px); background-color: #191817; }
+
+        /* Mobile Optimization */
+        @media (max-width: 768px) {
+            header { height: 80px; }
+            .header-logo { height: 60px !important; }
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 2.25rem !important; line-height: 1.1 !important; letter-spacing: -0.02em !important; }
+            h2 { font-size: 1.85rem !important; line-height: 1.1 !important; }
+            h3 { font-size: 1.5rem !important; line-height: 1.2 !important; }
+            .stat-heading { font-size: 2.1rem !important; }
+            .btn-primary { padding: 0.85rem 1.5rem; font-size: 10px; }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body class="antialiased bg-white">
+
+    <!-- Header Navigation -->
+    <header class="bg-white w-full z-50 sticky top-0 border-b border-brand-border h-[100px] flex items-center shadow-sm">
+        <div class="max-w-[1280px] w-full mx-auto px-6 h-full flex justify-between items-center">
+            
+            <div class="flex-shrink-0">
+                <a href="index.html">
+                    <img src="logo.jpg" alt="IAO Logo" class="header-logo h-20 w-auto object-contain" onerror="this.outerHTML='<span class=\'font-black text-3xl uppercase tracking-tighter\'>IAO</span>'">
+                </a>
+            </div>
+
+            <nav class="hidden lg:flex items-center h-full space-x-8">
+                <div class="nav-item h-full flex items-center">
+                    <a href="index.html" class="nav-link">Inicio</a>
+                </div>
+                
+                <div class="nav-item h-full flex items-center relative group">
+                    <a href="quienes-somos.html" class="nav-link flex items-center gap-1 text-brand-orange">Compañía <i class="fas fa-chevron-down text-[10px] opacity-60"></i></a>
+                    <div class="absolute top-[100px] left-0 w-[200px] bg-white shadow-xl mega-menu py-4 border-t-2 border-brand-orange">
+                        <a href="quienes-somos.html" class="block px-6 py-2 text-sm font-semibold hover:text-brand-orange transition">Quiénes somos</a>
+                        <a href="contacto.html" class="block px-6 py-2 text-sm font-semibold hover:text-brand-orange transition">Contáctanos</a>
+                        <a href="ubicaciones.html" class="block px-6 py-2 text-sm font-semibold text-brand-orange transition">Ubicaciones</a>
+                    </div>
+                </div>
+
+                <div class="nav-item h-full flex items-center relative group">
+                    <a href="index.html" class="nav-link flex items-center gap-1">Servicios <i class="fas fa-chevron-down text-[10px] opacity-60"></i></a>
+                    <div class="absolute top-[100px] left-[-30px] w-[280px] bg-white shadow-xl mega-menu py-4 border-t-2 border-brand-orange">
+                        <a href="servicio-auditoria-cfd.html" class="block px-6 py-2 text-sm font-semibold hover:text-brand-orange transition">Auditoría Energética / Mecánica CFD</a>
+                        <a href="reformas.html" class="block px-6 py-2 text-sm font-semibold hover:text-brand-orange transition">Reformas</a>
+                        <a href="construccion.html" class="block px-6 py-2 text-sm font-semibold hover:text-brand-orange transition">Mantenimiento</a>
+                        <a href="construccion.html" class="block px-6 py-2 text-sm font-semibold hover:text-brand-orange transition">Digitalización de calderas</a>
+                    </div>
+                </div>
+
+                <div class="nav-item h-full flex items-center relative group">
+                    <a href="soluciones.html" class="nav-link">Soluciones</a>
+                </div>
+
+                <div class="nav-item h-full flex items-center relative group">
+                    <a href="productos.html" class="nav-link">Productos</a>
+                </div>
+
+                <div class="nav-item h-full flex items-center relative group">
+                    <a href="#" class="nav-link flex items-center gap-1">Blog <i class="fas fa-chevron-down text-[10px] opacity-60"></i></a>
+                    <div class="absolute top-[100px] left-0 w-[260px] bg-white shadow-xl py-4 border-t-2 border-brand-orange opacity-0 invisible group-hover:opacity-100 group-hover:visible translate-y-2 group-hover:translate-y-0 transition-all duration-300 z-[100]">
+                        <a href="blog-reforma-calderas.html" class="block px-6 py-2 text-sm font-semibold hover:text-brand-orange transition">Reforma de Calderas de Biomasa</a>
+                        <a href="blog-optimiza-caldera.html" class="block px-6 py-2 text-sm font-semibold hover:text-brand-orange transition">Optimiza tu caldera</a>
+                        <a href="blog-corrida-financiera.html" class="block px-6 py-2 text-sm font-semibold hover:text-brand-orange transition">Corrida Financiera Personalizada</a>
+                        <a href="blog-checklist.html" class="block px-6 py-2 text-sm font-semibold hover:text-brand-orange transition">Checklist de Mantenimiento</a>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Search / Language / Mobile Menu -->
+            <div class="flex items-center space-x-6">
+                <!-- Language Picker -->
+                <div class="hidden lg:block relative group h-full">
+                    <button class="flex items-center gap-2 text-brand-dark hover:text-brand-orange font-bold text-xs uppercase tracking-widest transition-all">
+                        <i class="fas fa-globe text-sm"></i>
+                        <span>ES</span>
+                        <i class="fas fa-chevron-down text-[10px] opacity-40"></i>
+                    </button>
+                    <!-- Dropdown -->
+                    <div class="absolute top-full right-0 mt-4 w-32 bg-white shadow-2xl rounded-sm py-2 border-t-2 border-brand-orange opacity-0 invisible group-hover:opacity-100 group-hover:visible translate-y-2 group-hover:translate-y-0 transition-all duration-300 z-50">
+                        <a href="#" class="block px-4 py-2 text-[10px] font-black uppercase tracking-widest text-brand-orange bg-orange-50/50">Español</a>
+                        <a href="en/locations.html" class="block px-4 py-2 text-[10px] font-black uppercase tracking-widest text-gray-400 hover:text-brand-orange hover:bg-orange-50/30 transition-colors">English</a>
+                    </div>
+                </div>
+
+                <button class="text-brand-dark hover:text-brand-orange transition hidden lg:block">
+                    <i class="fas fa-search text-xl"></i>
+                </button>
+                
+                <button onclick="toggleMobileMenu()" class="text-brand-dark text-2xl lg:hidden focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="bg-[#191817] pt-24 pb-20 border-b-4 border-brand-orange">
+            <div class="max-w-[1280px] mx-auto px-6 text-center">
+                <h1 class="text-5xl md:text-7xl font-black text-white uppercase tracking-tighter mb-6 relative inline-block">
+                    Ubicaciones
+                </h1>
+                <p class="text-gray-400 text-xl font-medium max-w-2xl mx-auto leading-relaxed">
+                    Nuestra sede corporativa e instalaciones industriales en México.
+                </p>
+            </div>
+        </section>
+
+        <!-- Location Content -->
+        <section class="py-24 bg-white">
+            <div class="max-w-[1280px] mx-auto px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    
+                    <!-- Address Info -->
+                    <div class="space-y-10">
+                        <div>
+                            <span class="text-brand-orange font-black uppercase tracking-widest text-sm mb-4 block">Sede Corporativa</span>
+                            <h2 class="text-4xl md:text-[3rem] font-black text-brand-dark uppercase tracking-tight leading-none mb-6">
+                                Instalaciones IAO
+                            </h2>
+                            <p class="text-gray-500 font-medium text-lg leading-relaxed mb-8">
+                                Contamos con instalaciones industriales de gran formato, permitiendo el maquinado y fabricación de grandes piezas, asegurando la óptima logística y operatividad.
+                            </p>
+                        </div>
+
+                        <!-- Location Card -->
+                        <div class="bg-[#f9f9f9] border border-gray-100 p-10 shadow-lg flex items-start gap-6 relative overflow-hidden group">
+                            <div class="absolute inset-0 bg-brand-orange translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out z-0"></div>
+                            <div class="w-16 h-16 bg-white shrink-0 rounded-full flex items-center justify-center shadow-md relative z-10 text-brand-orange">
+                                <i class="fas fa-map-marker-alt text-2xl"></i>
+                            </div>
+                            <div class="relative z-10">
+                                <h3 class="text-2xl font-black text-brand-dark group-hover:text-white uppercase tracking-tight mb-3 transition-colors duration-300">
+                                    Planta Jalisco
+                                </h3>
+                                <address class="text-gray-600 font-medium leading-relaxed not-italic group-hover:text-white/90 transition-colors duration-300">
+                                    Avenida del Cobre No. 8<br>
+                                    Col. El Castillo, C.P. 45680<br>
+                                    El Salto. Jalisco. México.
+                                </address>
+                            </div>
+                        </div>
+
+                        <!-- Get Directions CTA -->
+                        <div>
+                            <a href="https://maps.google.com/?q=Avenida+del+Cobre+No.+8+Col.+El+Castillo+El+Salto+Jalisco+Mexico" target="_blank" class="btn-primary">
+                                Cómo Llegar <i class="fas fa-directions ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Map Overlay -->
+                    <div class="h-[600px] w-full bg-gray-200 border-4 border-white shadow-2xl relative">
+                        <!-- We use an iframe embedding Google Maps for El Salto, Jalisco -->
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14945.394209930983!2d-103.1895!3d20.5312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842f4cce2ad5e5cf%3A0xb3debbabfed4be6d!2sEl%20Castillo%2C%20El%20Salto%2C%20Jal.!5e0!3m2!1sen!2smx!4v1711582218456!5m2!1sen!2smx" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0; filter: grayscale(100%) contrast(1.2) opacity(0.8);" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            class="absolute inset-0 z-0">
+                        </iframe>
+                        <div class="absolute inset-0 pointer-events-none border border-black/5 z-10"></div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Premium Industrial Footer -->
+    <footer class="bg-brand-dark text-white pt-24 pb-12 border-t-4 border-brand-orange relative overflow-hidden">
+        <!-- Subtle Background Pattern / Watermark -->
+        <div class="absolute inset-0 opacity-[0.03] pointer-events-none flex items-center justify-center">
+            <span class="text-[20rem] font-black select-none">IAO</span>
+        </div>
+
+        <div class="max-w-[1280px] mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
+                
+                <!-- Col 1: Identity & About -->
+                <div class="space-y-8">
+                    <div>
+                        <img src="logo.jpg" alt="IAO Logo" class="h-14 w-auto object-contain bg-white p-2 rounded-sm mb-6 grayscale hover:grayscale-0 transition-all duration-500" onerror="this.outerHTML='<span class=\'font-black text-3xl uppercase tracking-tighter mb-6 block\'>IAO</span>'">
+                        <p class="text-gray-400 text-sm leading-relaxed max-w-xs">
+                            Líderes en ingeniería térmica y soluciones de vapor. Sistemas eficientes, sostenibles y de alta tecnología para la industria global.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="https://www.linkedin.com/in/ingenier%C3%ADa-avante-de-occidente-93aa9b352/" target="_blank" class="w-10 h-10 border border-white/10 rounded-full flex items-center justify-center text-gray-400 hover:text-brand-orange hover:border-brand-orange transition-all duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=61582072648065" target="_blank" class="w-10 h-10 border border-white/10 rounded-full flex items-center justify-center text-gray-400 hover:text-brand-orange hover:border-brand-orange transition-all duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://x.com/IaoMarketi1833" target="_blank" class="w-10 h-10 border border-white/10 rounded-full flex items-center justify-center text-gray-400 hover:text-brand-orange hover:border-brand-orange transition-all duration-300">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@marketingiao" target="_blank" class="w-10 h-10 border border-white/10 rounded-full flex items-center justify-center text-gray-400 hover:text-brand-orange hover:border-brand-orange transition-all duration-300">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://wa.me/523323488430" target="_blank" class="w-10 h-10 border border-white/10 rounded-full flex items-center justify-center text-gray-400 hover:text-brand-orange hover:border-brand-orange transition-all duration-300">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Navigation -->
+                <div>
+                    <h4 class="text-white font-black uppercase tracking-widest text-xs mb-8 flex items-center gap-2">
+                        <span class="w-6 h-[1px] bg-brand-orange"></span>
+                        Nuestra Empresa
+                    </h4>
+                    <ul class="space-y-4">
+                        <li><a href="index.html" class="text-gray-400 hover:text-brand-orange text-sm font-bold uppercase tracking-wider transition-colors duration-200 flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] opacity-30"></i> Inicio</a></li>
+                        <li><a href="quienes-somos.html" class="text-gray-400 hover:text-brand-orange text-sm font-bold uppercase tracking-wider transition-colors duration-200 flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] opacity-30"></i> Quiénes Somos</a></li>
+                        <li><a href="ubicaciones.html" class="text-gray-400 hover:text-brand-orange text-sm font-bold uppercase tracking-wider transition-colors duration-200 flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] opacity-30"></i> Ubicaciones</a></li>
+                        <li><a href="contacto.html" class="text-gray-400 hover:text-brand-orange text-sm font-bold uppercase tracking-wider transition-colors duration-200 flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] opacity-30"></i> Contacto</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Solutions -->
+                <div>
+                    <h4 class="text-white font-black uppercase tracking-widest text-xs mb-8 flex items-center gap-2">
+                        <span class="w-6 h-[1px] bg-brand-orange"></span>
+                        Especialidades
+                    </h4>
+                    <ul class="space-y-4">
+                        <li><a href="servicio-auditoria-cfd.html" class="text-gray-400 hover:text-brand-orange text-sm font-bold uppercase tracking-wider transition-colors duration-200 flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] opacity-30"></i> Auditoría CFD</a></li>
+                        <li><a href="index.html#productos" class="text-gray-400 hover:text-brand-orange text-sm font-bold uppercase tracking-wider transition-colors duration-200 flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] opacity-30"></i> Generadores de Vapor</a></li>
+                        <li><a href="index.html#productos" class="text-gray-400 hover:text-brand-orange text-sm font-bold uppercase tracking-wider transition-colors duration-200 flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] opacity-30"></i> Calderas Híbridas</a></li>
+                        <li><button onclick="openPrivacyModal()" class="text-gray-400 hover:text-brand-orange text-sm font-bold uppercase tracking-wider transition-colors duration-200 flex items-center gap-2 text-left w-full"><i class="fas fa-shield-alt text-[10px] opacity-30"></i> Aviso de Privacidad</button></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Contact -->
+                <div>
+                    <h4 class="text-white font-black uppercase tracking-widest text-xs mb-8 flex items-center gap-2">
+                        <span class="w-6 h-[1px] bg-brand-orange"></span>
+                        Sede Corporativa
+                    </h4>
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <i class="fas fa-map-marker-alt text-brand-orange mt-1"></i>
+                            <p class="text-gray-400 text-sm leading-relaxed">
+                                Avenida del Cobre No. 8 Col. El Castillo<br>
+                                C.P. 45680 El Salto, Jalisco. Méx.
+                            </p>
+                        </div>
+                        <div class="flex gap-4">
+                            <i class="fab fa-whatsapp text-brand-orange text-lg"></i>
+                            <p class="text-gray-400 text-sm font-bold hover:text-white transition-colors duration-300">
+                                <a href="https://wa.me/523323488430">+52 33 2348 8430</a>
+                            </p>
+                        </div>
+                        <div class="flex gap-4">
+                            <i class="fas fa-envelope text-brand-orange mt-1"></i>
+                            <p class="text-gray-400 text-sm font-bold hover:text-white transition-colors duration-300 underline underline-offset-4 decoration-brand-orange/30">
+                                <a href="mailto:hola@iao.com.mx">hola@iao.com.mx</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-white/5 pt-10 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-[10px] text-gray-500 font-bold uppercase tracking-[0.2em]">
+                <p>&copy; 2026 Ingeniería Avante de Occidente S.A. DE C.V. </p>
+                <div class="flex items-center gap-8">
+                    <span>Todos los derechos reservados</span>
+                    <button onclick="openPrivacyModal()" class="hover:text-brand-orange transition-colors duration-300">Privacidad</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Element -->
+    <a href="https://wa.me/523323488430" target="_blank" class="float-wpp bg-brand-orange text-white w-14 h-14 flex items-center justify-center rounded-full shadow-2xl z-50 fixed bottom-8 right-8 text-2xl" title="Contacto Ejecutivo">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Privacy Policy Modal -->
+    <div id="privacy-modal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+        <div class="bg-white w-full max-w-4xl max-h-[95vh] overflow-hidden flex flex-col relative shadow-2xl rounded-sm">
+            <!-- Close Button -->
+            <button onclick="closePrivacyModal()" class="absolute top-4 right-4 text-gray-400 hover:text-brand-orange transition-colors z-50">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+            
+            <!-- Modal Content -->
+            <div class="p-8 md:p-12 overflow-y-auto custom-scrollbar">
+                <div class="max-w-3xl mx-auto">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-[2px] bg-brand-orange"></div>
+                        <span class="text-brand-orange font-bold uppercase tracking-[0.2em] text-xs">Cumplimiento Legal</span>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-black text-brand-dark uppercase tracking-tight mb-8 border-b border-gray-100 pb-6">
+                        AVISO DE PRIVACIDAD<br>
+                        <span class="text-lg md:text-xl text-gray-400">PARA CLIENTES Y PROVEEDORES</span>
+                    </h2>
+                    
+                    <div class="space-y-6 text-gray-600 leading-relaxed text-sm md:text-base">
+                        <p><strong>INGENIERÍA AVANTE DE OCCIDENTE S.A. DE C.V.</strong> con domicilio en Avenida del Cobre No. 8, Col. El Castillo, El Salto, Jalisco, de conformidad con lo dispuesto en la Ley Federal de Protección de Datos Personales en Posesión de los Particulares hace de su conocimiento el presente Aviso de Privacidad para los clientes y proveedores:</p>
+
+                        <div class="bg-gray-50 p-6 border-l-4 border-brand-orange">
+                            <h3 class="font-black uppercase text-brand-dark mb-3 tracking-wide text-sm">SOBRE EL TRATAMIENTO DE SUS DATOS PERSONALES DE LOS CLIENTES Y PROVEEDORES:</h3>
+                            <p class="text-sm">Recabamos sus datos personales y datos personales sensibles para los efectos mencionados en el presente Aviso de Privacidad. En éste sentido, hacemos de su conocimiento que sus datos personales serán tratados y resguardados con base en los principios de licitud, calidad, consentimiento, información, finalidad, lealtad, proporcionalidad y responsabilidad, consagrados en la Ley Federal de Protección de Datos Personales en Posesión de los Particulares.</p>
+                        </div>
+
+                        <div>
+                            <h3 class="font-black uppercase text-brand-dark mb-3 tracking-wide text-sm">FINALIDAD EN EL TRATAMIENTO DE SUS DATOS PERSONALES:</h3>
+                            <p>Recopilamos sus datos personales y datos personales sensibles por lo que solicitamos su consentimiento a través del presente Aviso de Privacidad con el objeto de utilizarlos para los siguientes fines:</p>
+                            <ul class="list-none pl-0 mt-4 space-y-3">
+                                <li class="flex gap-2"><span class="font-bold text-brand-orange">I.</span> Para contactarlo y enviarle información relevante sobre nuestros productos.</li>
+                                <li class="flex gap-2"><span class="font-bold text-brand-orange">II.</span> Identificarlo como cliente y/o proveedor de INGENIERÍA AVANTE DE OCCIDENTE S.A. DE C.V.</li>
+                                <li class="flex gap-2"><span class="font-bold text-brand-orange">III.</span> Para realizar todas las gestiones internas necesarias relacionadas con la relación comercial vigente, incluyendo cuestiones de crédito y pagos.</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3 class="font-black uppercase text-brand-dark mb-3 tracking-wide text-sm">MEDIOS PARA LIMITAR EL USO O DIVULGACIÓN DE SUS DATOS PERSONALES:</h3>
+                            <p>Hacemos de su conocimiento que sus datos personales y datos personales sensibles serán resguardados bajo estrictas medidas de seguridad administrativas, técnicas y físicas las cuales han sido implementadas con el objeto de proteger sus datos personales contra daño, pérdida, alteración, destrucción o el uso, acceso o tratamiento no autorizados.</p>
+                        </div>
+
+                        <div class="border border-gray-100 p-6 rounded-sm">
+                            <h3 class="font-black uppercase text-brand-dark mb-3 tracking-wide text-sm">MEDIOS PARA EL EJERCICIO DE SUS DERECHOS COMO TITULAR DE LOS DATOS PERSONALES:</h3>
+                            <p>Como titular de los datos personales objeto del presente Aviso de Privacidad usted podrá ejercitar sus derechos de acceso, rectificación, cancelación u oposición (Derechos ARCO), mismos que se consagran en la Ley Federal de Protección de Datos Personales en Posesión de los Particulares. Así mismo podrá revocar el consentimiento otorgado para el uso de sus datos personales. En cualquiera de estos supuestos, puede realizar su solicitud mediante el envío de un correo electrónico a la dirección <a href="mailto:aprivacidad@iao.com.mx" class="text-brand-orange hover:underline font-bold">aprivacidad@iao.com.mx</a></p>
+                            <p class="mt-4 text-[11px] text-gray-400 italic">Con la finalidad de poder atender su solicitud, ésta deberá satisfacer todos los requisitos estipulados en la Ley Federal de Protección de Datos Personales en Posesión de los Particulares.</p>
+                        </div>
+
+                        <div>
+                            <h3 class="font-black uppercase text-brand-dark mb-3 tracking-wide text-sm">TRANSFERENCIA DE SUS DATOS PERSONALES</h3>
+                            <p>Sus datos personales y/o datos personales sensibles podrán ser transferidos a los terceros, que para el cumplimiento de las obligaciones que INGENIERÍA AVANTE DE OCCIDENTE S.A. DE C.V. le ofrece, sea necesario. Lo anterior sin perjuicio de las excepciones de la Ley Federal de Protección de Datos Personales en Posesión de los Particulares. Por lo que se solicita su consentimiento expreso para realizar dichas transferencias (Seleccionar sólo 1 opción con una X)</p>
+                            <div class="mt-4 space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group">
+                                    <div class="w-5 h-5 border-2 border-brand-orange rounded-sm flex items-center justify-center group-hover:bg-orange-50 transition-colors"></div>
+                                    <span class="text-sm font-medium">Doy mi consentimiento para la transferencia de mis datos.</span>
+                                </label>
+                                <label class="flex items-center gap-3 cursor-pointer group">
+                                    <div class="w-5 h-5 border-2 border-brand-orange rounded-sm flex items-center justify-center group-hover:bg-orange-50 transition-colors"></div>
+                                    <span class="text-sm font-medium">No doy mi consentimiento para la transferencia de mis datos.</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="pt-6 border-t border-gray-100">
+                            <h3 class="font-black uppercase text-brand-dark mb-3 tracking-wide text-sm">1. CAMBIOS AL PRESENTE AVISO DE PRIVACIDAD</h3>
+                            <p>El presente Aviso de Privacidad podrá ser modificado en el futuro. En todo caso, cualquier modificación se publicará en la siguiente página web: <a href="http://www.iao.com.mx" target="_blank" class="text-brand-orange hover:underline font-bold">www.iao.com.mx</a></p>
+                            <p class="mt-2 text-sm">Sin embargo, por su seguridad, el Aviso de Privacidad vigente estará disponible en todo momento en la página web antes señalada.</p>
+                        </div>
+
+                        <div class="pt-10 space-y-8 opacity-60">
+                            <div class="text-center">
+                                <p class="font-black uppercase tracking-widest text-brand-dark text-[10px] mb-8">RECIBÍ DE CONFORMIDAD Y DOY MI CONSENTIMIENTO</p>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                                <div class="border-b border-gray-200 pb-2">
+                                    <span class="text-[9px] uppercase font-bold text-gray-400 block mb-1">Nombre y Firma</span>
+                                    <div class="h-8"></div>
+                                </div>
+                                <div class="border-b border-gray-200 pb-2">
+                                    <span class="text-[9px] uppercase font-bold text-gray-400 block mb-1">Fecha</span>
+                                    <div class="h-8"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer in modal to acknowledge / close -->
+            <div class="p-6 border-t border-gray-100 bg-gray-50 flex justify-end">
+                <button onclick="closePrivacyModal()" class="bg-brand-dark text-white font-black uppercase tracking-widest text-xs px-10 py-4 hover:bg-brand-orange transition-all duration-300">
+                    Cerrar y Aceptar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                menu.classList.add('flex');
+                document.body.style.overflow = 'hidden';
+            } else {
+                menu.classList.add('hidden');
+                menu.classList.remove('flex');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        function openPrivacyModal() {
+            const modal = document.getElementById('privacy-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closePrivacyModal() {
+            const modal = document.getElementById('privacy-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close on click outside
+        window.onclick = function(event) {
+            const privacyModal = document.getElementById('privacy-modal');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (event.target == privacyModal) {
+                closePrivacyModal();
+            }
+            if (event.target == mobileMenu) {
+                toggleMobileMenu();
+            }
+        }
+    </script>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-brand-dark z-[100] hidden flex-col p-8 overflow-y-auto">
+        <div class="flex justify-between items-center mb-16">
+            <img src="logo.jpg" class="h-12 w-auto bg-white p-1 rounded-sm grayscale invert">
+            <button onclick="toggleMobileMenu()" class="text-white text-3xl focus:outline-none">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <nav class="flex flex-col space-y-8">
+            <a href="index.html" class="text-2xl font-black text-white uppercase tracking-tighter hover:text-brand-orange transition-colors">Inicio</a>
+            
+            <div class="space-y-4">
+                <span class="block text-[10px] font-black uppercase tracking-[0.3em] text-brand-orange">Compañía</span>
+                <div class="flex flex-col space-y-4 pl-4 border-l border-white/10">
+                    <a href="quienes-somos.html" class="text-lg font-bold text-gray-300 hover:text-white transition-colors">Quiénes Somos</a>
+                    <a href="ubicaciones.html" class="text-lg font-bold text-gray-300 hover:text-white transition-colors">Ubicaciones</a>
+                    <a href="contacto.html" class="text-lg font-bold text-gray-300 hover:text-white transition-colors">Contacto</a>
+                </div>
+            </div>
+
+            <div class="space-y-4">
+                <span class="block text-[10px] font-black uppercase tracking-[0.3em] text-brand-orange">Servicios</span>
+                <div class="flex flex-col space-y-4 pl-4 border-l border-white/10">
+                    <a href="servicio-auditoria-cfd.html" class="text-lg font-bold text-gray-300 hover:text-white transition-colors">Auditoría CFD</a>
+                    <a href="reformas.html" class="text-lg font-bold text-gray-300 hover:text-white transition-colors">Reformas</a>
+                    <a href="construccion.html" class="text-lg font-bold text-gray-300 hover:text-white transition-colors">Mantenimiento</a>
+                </div>
+            </div>
+
+            <a href="soluciones.html" onclick="toggleMobileMenu()" class="text-2xl font-black text-white uppercase tracking-tighter hover:text-brand-orange transition-colors">Soluciones</a>
+
+            <a href="productos.html" onclick="toggleMobileMenu()" class="text-2xl font-black text-white uppercase tracking-tighter hover:text-brand-orange transition-colors">Productos</a>
+
+            <div class="space-y-4 pt-8 border-t border-white/10">
+                <a href="en/locations.html" class="flex items-center gap-3 text-sm font-black text-white uppercase tracking-widest">
+                    <i class="fas fa-globe text-brand-orange"></i> English Version
+                </a>
+            </div>
+        </nav>
+
+        <div class="mt-auto pt-12 flex gap-6">
+            <a href="https://www.linkedin.com/in/ingenier%C3%ADa-avante-de-occidente-93aa9b352/" target="_blank" class="text-white/60 hover:text-white text-xl"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61582072648065" target="_blank" class="text-white/60 hover:text-white text-xl"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://x.com/IaoMarketi1833" target="_blank" class="text-white/60 hover:text-white text-xl"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+    </div>
+
+</body>
+</html>

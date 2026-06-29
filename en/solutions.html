@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industrial Solutions | IAO Ingeniería Avante de Occidente</title>
+    <meta name="description" content="Discover our thermal and mechanical engineering solutions for the most demanding sectors: Sugar Mills, Mining, Energy and more.">
+    <!-- Manrope Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            orange: '#FC5220',
+                            dark: '#191817',
+                            gray: '#32373c',
+                            light: '#f9f9f9',
+                            border: '#E6E9EB'
+                        }
+                    },
+                    fontFamily: { sans: ['Manrope', 'system-ui', 'sans-serif'], }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Manrope', sans-serif; color: #000; background-color: #f9f9f9; }
+        .nav-link { color: #000; font-weight: 600; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.05em; transition: color 0.3s ease; }
+        .nav-link:hover, .nav-item:hover > .nav-link { color: #FC5220; }
+        .mega-menu { opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.3s ease; }
+        .nav-item:hover .mega-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        .float-wpp { transition: transform 0.3s, background-color 0.3s; }
+        .float-wpp:hover { transform: translateY(-5px); background-color: #191817; }
+    </style>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body class="antialiased">
+
+    <!-- Header Navigation -->
+    <header class="bg-white w-full z-50 sticky top-0 border-b border-brand-border h-[100px] flex items-center shadow-sm">
+        <div class="max-w-[1280px] w-full mx-auto px-6 h-full flex justify-between items-center">
+            <div class="flex-shrink-0">
+                <a href="index.html">
+                    <img src="../logo.jpg" alt="IAO Logo" class="h-20 w-auto object-contain">
+                </a>
+            </div>
+            <nav class="hidden lg:flex items-center h-full space-x-8">
+                <div class="nav-item h-full flex items-center"><a href="index.html" class="nav-link">Home</a></div>
+                <div class="nav-item h-full flex items-center relative group">
+                    <a href="about.html" class="nav-link flex items-center gap-1">Company <i class="fas fa-chevron-down text-[10px] opacity-60"></i></a>
+                    <div class="absolute top-[100px] left-0 w-[200px] bg-white shadow-xl mega-menu py-4 border-t-2 border-brand-orange">
+                        <a href="about.html" class="block px-6 py-2 text-sm font-semibold hover:text-brand-orange transition">About Us</a>
+                        <a href="contact.html" class="block px-6 py-2 text-sm font-semibold hover:text-brand-orange transition">Contact</a>
+                        <a href="locations.html" class="block px-6 py-2 text-sm font-semibold hover:text-brand-orange transition">Locations</a>
+                    </div>
+                </div>
+                <div class="nav-item h-full flex items-center"><a href="solutions.html" class="nav-link text-brand-orange">Solutions</a></div>
+                <div class="nav-item h-full flex items-center"><a href="products.html" class="nav-link">Products</a></div>
+                <div class="nav-item h-full flex items-center relative group">
+                    <a href="#" class="nav-link flex items-center gap-1">Blog <i class="fas fa-chevron-down text-[10px] opacity-60"></i></a>
+                    <div class="absolute top-[100px] left-0 w-[260px] bg-white shadow-xl py-4 border-t-2 border-brand-orange opacity-0 invisible group-hover:opacity-100 group-hover:visible translate-y-2 group-hover:translate-y-0 transition-all duration-300 z-[100]">
+                        <a href="blog-checklist.html" class="block px-6 py-2 text-sm font-semibold hover:text-brand-orange transition">Maintenance Checklist</a>
+                    </div>
+                </div>
+            </nav>
+            <div class="flex items-center space-x-6">
+                <!-- Language Picker -->
+                <div class="hidden lg:block relative group h-full">
+                    <button class="flex items-center gap-2 text-brand-dark hover:text-brand-orange font-bold text-xs uppercase tracking-widest transition-all">
+                        <i class="fas fa-globe text-sm"></i><span>EN</span>
+                    </button>
+                    <div class="absolute top-full right-0 mt-4 w-32 bg-white shadow-2xl rounded-sm py-2 border-t-2 border-brand-orange opacity-0 invisible group-hover:opacity-100 group-hover:visible translate-y-2 group-hover:translate-y-0 transition-all duration-300 z-50">
+                        <a href="../soluciones.html" class="block px-4 py-2 text-[10px] font-black uppercase tracking-widest text-gray-400 hover:text-brand-orange hover:bg-orange-50/30 transition-colors">Español</a>
+                        <a href="#" class="block px-4 py-2 text-[10px] font-black uppercase tracking-widest text-brand-orange bg-orange-50/50">English</a>
+                    </div>
+                </div>
+                <button onclick="toggleMobileMenu()" class="text-brand-dark text-2xl lg:hidden focus:outline-none"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="bg-[#191817] pt-32 pb-24 border-b-4 border-brand-orange">
+            <div class="max-w-[1280px] mx-auto px-6 text-center">
+                <span class="text-brand-orange font-black uppercase tracking-[0.3em] text-xs mb-4 block">Industrial Specialization</span>
+                <h1 class="text-5xl md:text-7xl font-black text-white uppercase tracking-tighter mb-8 leading-none">Solutions by Sector</h1>
+                <p class="text-gray-400 text-xl font-medium max-w-3xl mx-auto leading-relaxed">We develop custom engineering for sectors with high technical complexity, ensuring thermal efficiency and operational continuity.</p>
+            </div>
+        </section>
+
+        <section class="py-24 bg-white">
+            <div class="max-w-[1280px] mx-auto px-6">
+                <!-- Sector 1 -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-32">
+                    <div class="space-y-8">
+                        <div class="flex items-center gap-4">
+                            <i class="fas fa-seedling text-4xl text-brand-orange"></i>
+                            <h2 class="text-3xl font-black text-brand-dark uppercase tracking-tight">Sugar Mills</h2>
+                        </div>
+                        <div class="space-y-6 text-gray-600 text-lg leading-relaxed">
+                            <p>Efficiency in steam generation and biomass utilization is critical. At IAO, we provide comprehensive solutions for boiler optimization and cogeneration systems.</p>
+                            <ul class="space-y-3 italic">
+                                <li class="flex items-start gap-3"><i class="fas fa-check-circle text-brand-orange mt-1"></i><span>Design and manufacture of high-capacity bagasse boilers.</span></li>
+                                <li class="flex items-start gap-3"><i class="fas fa-check-circle text-brand-orange mt-1"></i><span>Modernization of combustion systems for harvesting seasons.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bg-gray-100 aspect-video overflow-hidden rounded-sm shadow-xl"><img src="../industria_strip.png" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"></div>
+                </div>
+
+                <!-- Sector 2 -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-32">
+                    <div class="lg:order-2 space-y-8">
+                        <div class="flex items-center gap-4">
+                            <i class="fas fa-mountain text-4xl text-brand-orange"></i>
+                            <h2 class="text-3xl font-black text-brand-dark uppercase tracking-tight">Mining & Heavy Industry</h2>
+                        </div>
+                        <div class="space-y-6 text-gray-600 text-lg leading-relaxed">
+                            <p>Mining operating conditions demand equipment of maximum structural strength and durability. We manufacture under international regulations to withstand aggressive chemical and thermal processes.</p>
+                        </div>
+                    </div>
+                    <div class="lg:order-1 bg-gray-100 aspect-video overflow-hidden rounded-sm shadow-xl"><img src="../aplicaciones_v2.png" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-brand-dark pt-24 pb-12">
+        <div class="max-w-[1280px] mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-16 mb-20 border-b border-white/5 pb-20 text-gray-500">
+                <div class="col-span-1 md:col-span-2">
+                    <img src="../logo.jpg" class="h-16 w-auto bg-white p-1 rounded-sm grayscale invert mb-8">
+                    <p class="max-w-md text-sm leading-relaxed">Supplying industrial equipment with the highest standards of quality and safety, backed by international certifications and a leading engineering team.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-black uppercase tracking-widest text-[10px] mb-8">Navigation</h4>
+                    <ul class="space-y-4 text-xs font-bold uppercase tracking-widest">
+                        <li><a href="about.html" class="hover:text-brand-orange transition-colors">Company</a></li>
+                        <li><a href="solutions.html" class="hover:text-brand-orange transition-colors">Solutions</a></li>
+                        <li><a href="contact.html" class="hover:text-brand-orange transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-black uppercase tracking-widest text-[10px] mb-8">Contact</h4>
+                    <p class="text-xs mb-4">Avenida del Cobre No. 8, Col. El Castillo, El Salto, Jalisco, MX.</p>
+                    <p class="text-brand-orange font-bold text-xs"><a href="https://wa.me/523323488430">+52 33 2348 8430</a></p>
+                </div>
+            </div>
+            <div class="text-[10px] text-gray-600 font-bold uppercase tracking-[0.3em] flex justify-between">
+                <p>&copy; 2026 IAO Ingeniería Avante de Occidente</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>function toggleMobileMenu() { const m = document.getElementById('mobile-menu'); m.classList.toggle('hidden'); m.classList.toggle('flex'); }</script>
+    <div id="mobile-menu" class="fixed inset-0 bg-brand-dark z-[100] hidden flex-col p-8 overflow-y-auto">
+        <div class="flex justify-between items-center mb-16">
+            <img src="../logo.jpg" class="h-12 w-auto bg-white p-1 rounded-sm grayscale invert">
+            <button onclick="toggleMobileMenu()" class="text-white text-3xl focus:outline-none"><i class="fas fa-times"></i></button>
+        </div>
+        <nav class="flex flex-col space-y-8">
+            <a href="index.html" class="text-2xl font-black text-white uppercase tracking-tighter hover:text-brand-orange transition-colors">Home</a>
+            <a href="about.html" class="text-2xl font-black text-white uppercase tracking-tighter hover:text-brand-orange transition-colors">Company</a>
+            <a href="solutions.html" class="text-2xl font-black text-brand-orange uppercase tracking-tighter transition-colors">Solutions</a>
+            <a href="products.html" class="text-2xl font-black text-white uppercase tracking-tighter hover:text-brand-orange transition-colors">Products</a>
+            <a href="../blog-checklist.html" class="text-2xl font-black text-white uppercase tracking-tighter hover:text-brand-orange transition-colors">Blog: Checklist</a>
+        </nav>
+    </div>
+</body>
+</html>

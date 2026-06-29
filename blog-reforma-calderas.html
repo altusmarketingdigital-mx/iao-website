@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reforma de Calderas de Biomasa | Blog Técnico IAO</title>
+    <meta name="description" content="Descubre cómo la repotenciación de calderas de biomasa puede optimizar el rendimiento y eficiencia de tu industria con IAO.">
+    <!-- Manrope Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            orange: '#FC5220',
+                            dark: '#191817',
+                            gray: '#32373c',
+                            light: '#f9f9f9',
+                            border: '#E6E9EB'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Manrope', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Manrope', sans-serif; color: #000; background-color: #f9f9f9; }
+        .nav-link { color: #000; font-weight: 600; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.05em; transition: color 0.3s ease; }
+        .nav-link:hover, .nav-item:hover > .nav-link { color: #FC5220; }
+        .mega-menu { opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.3s ease; }
+        .nav-item:hover .mega-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        .float-wpp { transition: transform 0.3s, background-color 0.3s; }
+        .float-wpp:hover { transform: translateY(-5px); background-color: #191817; }
+        .prose h2 { color: #191817; font-weight: 800; font-size: 1.8rem; margin-top: 2rem; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: -0.02em; }
+        .prose h3 { color: #191817; font-weight: 700; font-size: 1.4rem; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+        .prose p { margin-bottom: 1.25rem; line-height: 1.8; color: #4a5568; }
+        .prose ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1.5rem; color: #4a5568; }
+        .prose li { margin-bottom: 0.5rem; }
+    </style>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body class="antialiased">
+
+    <!-- Header Navigation -->
+    <header class="bg-white w-full z-50 sticky top-0 border-b border-brand-border h-[100px] flex items-center shadow-sm">
+        <div class="max-w-[1280px] w-full mx-auto px-6 h-full flex justify-between items-center">
+            
+            <!-- Logo -->
+            <div class="flex-shrink-0">
+                <a href="index.html">
+                    <img src="logo.jpg" alt="IAO Logo" class="h-20 w-auto object-contain">
+                </a>
+            </div>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden lg:flex items-center h-full space-x-8">
+                <div class="nav-item h-full flex items-center">
+                    <a href="index.html" class="nav-link">Inicio</a>
+                </div>
+                
+                <div class="nav-item h-full flex items-center relative group">
+                    <a href="quienes-somos.html" class="nav-link flex items-center gap-1">Compañía <i class="fas fa-chevron-down text-[10px] opacity-60"></i></a>
+                    <div class="absolute top-[100px] left-0 w-[200px] bg-white shadow-xl mega-menu py-4 border-t-2 border-brand-orange">
+                        <a href="quienes-somos.html" class="block px-6 py-2 text-sm font-semibold hover:text-brand-orange transition">Quiénes somos</a>
+                        <a href="contacto.html" class="block px-6 py-2 text-sm font-semibold hover:text-brand-orange transition">Contáctanos</a>
+                        <a href="ubicaciones.html" class="block px-6 py-2 text-sm font-semibold hover:text-brand-orange transition">Ubicaciones</a>
+                    </div>
+                </div>
+
+                <div class="nav-item h-full flex items-center relative group">
+                    <a href="#" class="nav-link flex items-center gap-1">Servicios <i class="fas fa-chevron-down text-[10px] opacity-60"></i></a>
+                    <div class="absolute top-[100px] left-[-30px] w-[280px] bg-white shadow-xl mega-menu py-4 border-t-2 border-brand-orange">
+                        <a href="servicio-auditoria-cfd.html" class="block px-6 py-2 text-sm font-semibold hover:text-brand-orange transition">Auditoría Energética / Mecánica CFD</a>
+                        <a href="reformas.html" class="block px-6 py-2 text-sm font-semibold hover:text-brand-orange transition">Reformas</a>
+                        <a href="construccion.html" class="block px-6 py-2 text-sm font-semibold hover:text-brand-orange transition">Mantenimiento</a>
+                        <a href="construccion.html" class="block px-6 py-2 text-sm font-semibold hover:text-brand-orange transition">Digitalización de calderas</a>
+                    </div>
+                </div>
+
+                <div class="nav-item h-full flex items-center relative group">
+                    <a href="soluciones.html" class="nav-link">Soluciones</a>
+                </div>
+
+                <div class="nav-item h-full flex items-center relative group">
+                    <a href="productos.html" class="nav-link">Productos</a>
+                </div>
+
+                <div class="nav-item h-full flex items-center relative group">
+                    <a href="#" class="nav-link text-brand-orange flex items-center gap-1">Blog <i class="fas fa-chevron-down text-[10px] opacity-60"></i></a>
+                    <div class="absolute top-[100px] left-0 w-[260px] bg-white shadow-xl mega-menu py-4 border-t-2 border-brand-orange">
+                        <a href="blog-reforma-calderas.html" class="block px-6 py-2 text-sm font-semibold hover:text-brand-orange transition">Reforma de Calderas de Biomasa</a>
+                        <a href="blog-optimiza-caldera.html" class="block px-6 py-2 text-sm font-semibold text-brand-orange transition">Optimiza tu caldera</a>
+                        <a href="blog-corrida-financiera.html" class="block px-6 py-2 text-sm font-semibold hover:text-brand-orange transition">Corrida Financiera Personalizada</a>
+                        <a href="blog-checklist.html" class="block px-6 py-2 text-sm font-semibold hover:text-brand-orange transition">Checklist de Mantenimiento</a>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Search / Language / Mobile Menu -->
+            <div class="flex items-center space-x-6">
+                <!-- Language Picker -->
+                <div class="hidden lg:block relative group h-full">
+                    <button class="flex items-center gap-2 text-brand-dark hover:text-brand-orange font-bold text-xs uppercase tracking-widest transition-all">
+                        <i class="fas fa-globe text-sm"></i>
+                        <span>ES</span>
+                        <i class="fas fa-chevron-down text-[10px] opacity-40"></i>
+                    </button>
+                    <div class="absolute top-full right-0 mt-4 w-32 bg-white shadow-2xl rounded-sm py-2 border-t-2 border-brand-orange opacity-0 invisible group-hover:opacity-100 group-hover:visible translate-y-2 group-hover:translate-y-0 transition-all duration-300 z-50">
+                        <a href="#" class="block px-4 py-2 text-[10px] font-black uppercase tracking-widest text-brand-orange bg-orange-50/50">Español</a>
+                        <a href="en/index.html" class="block px-4 py-2 text-[10px] font-black uppercase tracking-widest text-gray-400 hover:text-brand-orange hover:bg-orange-50/30 transition-colors">English</a>
+                    </div>
+                </div>
+
+                <button onclick="toggleMobileMenu()" class="text-brand-dark text-2xl lg:hidden focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="bg-[#191817] pt-24 pb-20 border-b-4 border-brand-orange">
+            <div class="max-w-[800px] mx-auto px-6 text-center">
+                <span class="text-brand-orange font-black uppercase tracking-[0.2em] text-xs mb-4 block">Blog Estratégico IAO</span>
+                <h1 class="text-4xl md:text-5xl font-black text-white uppercase tracking-tighter leading-tight">
+                    Reforma de Calderas de Biomasa
+                </h1>
+            </div>
+        </section>
+
+        <!-- Article Section -->
+        <section class="py-20 bg-white">
+            <div class="max-w-[800px] mx-auto px-6 prose prose-lg">
+                
+                <p class="text-xl text-brand-dark font-black uppercase mb-6 text-center">
+                    Eficiencia y ahorro para tu industria
+                </p>
+
+                <div class="clearfix mb-8">
+                    <img src="reforma_calderas_img.jpg" alt="Modelo 3D de Caldera" class="w-full md:w-[45%] float-none md:float-right mx-auto md:mx-0 md:ml-8 mb-6 object-contain mix-blend-darken">
+                    <p>La repotenciación de calderas de biomasa consiste en la actualización o mejora de las instalaciones y sistemas de una caldera existente para optimizar su rendimiento, incrementar su eficiencia y prolongar su vida útil. Esta intervención puede incluir la actualización de componentes clave como intercambiadores de calor, quemadores, sistemas de control y automatización, y mejoras en los sistemas de limpieza y monitoreo.</p>
+                </div>
+
+                <h2 class="mt-12">¿Por qué reformar tu caldera?</h2>
+                <ul class="space-y-4 my-6 list-none pl-0">
+                    <li class="flex items-start gap-3">
+                        <i class="fas fa-check-circle text-brand-orange mt-1"></i>
+                        <div>
+                            <strong>Maximiza el aprovechamiento:</strong> La repotenciación mejora la combustión y reduce las pérdidas de calor, maximizando el aprovechamiento del combustible y disminuyendo los costos operativos.
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fas fa-arrow-up text-brand-orange mt-1"></i>
+                        <div>
+                            <strong>Ampliación de la capacidad de producción:</strong> Adaptar tu caldera para mayores demandas de energía asegura que tu empresa pueda crecer sin limitaciones, manteniendo la producción al máximo.
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fas fa-leaf text-brand-orange mt-1"></i>
+                        <div>
+                            <strong>Reducción del impacto ambiental:</strong> IAO redefine la repotenciación de calderas, impulsando la vanguardia energética. Modernizamos sus equipos con tecnología de punta, maximizando la eficiencia y reduciendo el impacto ambiental. Ofrecemos soluciones a medida, desde diagnósticos precisos hasta mantenimientos integrales. Nuestra experiencia garantiza un rendimiento superior y una vida útil extendida. Con IAO, su empresa supera estándares y fortalece su posición en el mercado. Somos tu socio para un futuro sostenible y rentable.
+                        </div>
+                    </li>
+                </ul>
+
+                <h2 class="mt-12">Contamos con la mejor tecnología de parrillas</h2>
+                <p>IAO cuenta con la tecnología de punta en parrillas viajeras, las cuales pueden trabajar con excesos de tierra y humedad (54%) y al ser auto limpiantes, elimina la necesidad de trabajos exhaustivos de limpieza y mantenimiento a la vez que propicia una combustión uniforme y eficiente.</p>
+
+                <hr class="my-12 border-gray-200" />
+
+                <!-- Call to Action Download box -->
+                <div class="p-8 bg-gray-50 border-l-4 border-brand-orange rounded-r-md shadow-sm">
+                    <div class="flex flex-col md:flex-row items-center gap-8">
+                        <div class="flex-shrink-0 text-brand-orange text-6xl">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-2xl font-black text-brand-dark mb-3">Infografía PDF: Reforma de Calderas de Biomasa</h4>
+                            <p class="text-gray-600 mb-6 font-medium text-sm leading-relaxed">
+                                Descarga el documento completo con la información técnica y los beneficios de la repotenciación para uso interactivo.
+                            </p>
+                            <a href="https://drive.google.com/file/d/1RFoB0f-3ajXQx3hTKqKUTGwSt4BAdNZg/view" target="_blank" class="inline-flex items-center gap-3 bg-brand-orange text-white font-black uppercase tracking-widest text-xs px-8 py-4 hover:bg-brand-dark transition-colors shadow-lg">
+                                <i class="fas fa-download"></i> Obtener Documento
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark pt-24 pb-12 overflow-hidden">
+        <div class="max-w-[1280px] mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 border-t border-white/10 pt-12">
+                <div class="md:col-span-4 text-center">
+                    <p class="text-gray-500 text-xs font-bold uppercase tracking-widest">&copy; 2026 IAO Ingeniería Avante de Occidente S.A. DE C.V.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Element -->
+    <a href="https://wa.me/523323488430" target="_blank" class="float-wpp bg-brand-orange text-white w-14 h-14 flex items-center justify-center rounded-full shadow-2xl z-50 fixed bottom-8 right-8 text-2xl">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-brand-dark z-[100] hidden flex-col p-8 overflow-y-auto">
+        <div class="flex justify-between items-center mb-16">
+            <img src="logo.jpg" class="h-12 w-auto bg-white p-1 rounded-sm grayscale invert">
+            <button onclick="toggleMobileMenu()" class="text-white text-3xl focus:outline-none">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="flex flex-col space-y-8">
+            <a href="index.html" class="text-2xl font-black text-white uppercase tracking-tighter hover:text-brand-orange transition-colors">Inicio</a>
+            <a href="quienes-somos.html" class="text-2xl font-black text-white uppercase tracking-tighter hover:text-brand-orange transition-colors">Compañía</a>
+            <a href="soluciones.html" class="text-2xl font-black text-white uppercase tracking-tighter hover:text-brand-orange transition-colors">Soluciones</a>
+            <a href="productos.html" class="text-2xl font-black text-white uppercase tracking-tighter hover:text-brand-orange transition-colors">Productos</a>
+            <a href="blog-reforma-calderas.html" class="text-2xl font-black text-white uppercase tracking-tighter hover:text-brand-orange transition-colors">Blog: Reforma de Calderas de Biomasa</a>
+            <a href="blog-optimiza-caldera.html" class="text-2xl font-black text-brand-orange uppercase tracking-tighter hover:text-white transition-colors">Blog: Optimiza tu Caldera</a>
+            <a href="blog-corrida-financiera.html" class="text-2xl font-black text-brand-orange uppercase tracking-tighter hover:text-white transition-colors">Blog: Corrida Financiera</a>
+            <a href="blog-checklist.html" class="text-2xl font-black text-brand-orange uppercase tracking-tighter hover:text-white transition-colors">Blog: Checklist</a>
+        </nav>
+    </div>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                menu.classList.add('flex');
+                document.body.style.overflow = 'hidden';
+            } else {
+                menu.classList.add('hidden');
+                menu.classList.remove('flex');
+                document.body.style.overflow = 'auto';
+            }
+        }
+    </script>
+</body>
+</html>

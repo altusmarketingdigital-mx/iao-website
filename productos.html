@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos y Equipos Industriales | IAO Ingeniería Avante de Occidente</title>
+    <meta name="description" content="Especialistas en fabricación de equipos industriales certificados: Intercambiadores, Tanques ASME, Calderas de biomassa y más.">
+    <!-- Manrope Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            orange: '#FC5220',
+                            dark: '#191817',
+                            gray: '#32373c',
+                            light: '#f9f9f9',
+                            border: '#E6E9EB'
+                        }
+                    },
+                    fontFamily: { sans: ['Manrope', 'system-ui', 'sans-serif'], }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Manrope', sans-serif; color: #000; background-color: #f9f9f9; }
+        .nav-link { color: #000; font-weight: 600; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.05em; transition: color 0.3s ease; }
+        .nav-link:hover, .nav-item:hover > .nav-link { color: #FC5220; }
+        .mega-menu { opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.3s ease; }
+        .nav-item:hover .mega-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        .float-wpp { transition: transform 0.3s, background-color 0.3s; }
+        .float-wpp:hover { transform: translateY(-5px); background-color: #191817; }
+    </style>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body class="antialiased">
+
+    <!-- Header Navigation -->
+    <header class="bg-white w-full z-50 sticky top-0 border-b border-brand-border h-[100px] flex items-center shadow-sm">
+        <div class="max-w-[1280px] w-full mx-auto px-6 h-full flex justify-between items-center">
+            <div class="flex-shrink-0">
+                <a href="index.html">
+                    <img src="logo.jpg" alt="IAO Logo" class="h-20 w-auto object-contain">
+                </a>
+            </div>
+            <nav class="hidden lg:flex items-center h-full space-x-8">
+                <div class="nav-item h-full flex items-center"><a href="index.html" class="nav-link">Inicio</a></div>
+                <div class="nav-item h-full flex items-center relative group">
+                    <a href="quienes-somos.html" class="nav-link flex items-center gap-1">Compañía <i class="fas fa-chevron-down text-[10px] opacity-60"></i></a>
+                    <div class="absolute top-[100px] left-0 w-[200px] bg-white shadow-xl mega-menu py-4 border-t-2 border-brand-orange">
+                        <a href="quienes-somos.html" class="block px-6 py-2 text-sm font-semibold hover:text-brand-orange transition">Quiénes somos</a>
+                        <a href="contacto.html" class="block px-6 py-2 text-sm font-semibold hover:text-brand-orange transition">Contáctanos</a>
+                        <a href="ubicaciones.html" class="block px-6 py-2 text-sm font-semibold hover:text-brand-orange transition">Ubicaciones</a>
+                    </div>
+                </div>
+                <div class="nav-item h-full flex items-center relative group">
+                    <a href="#" class="nav-link flex items-center gap-1">Servicios <i class="fas fa-chevron-down text-[10px] opacity-60"></i></a>
+                    <div class="absolute top-[100px] left-[-30px] w-[280px] bg-white shadow-xl mega-menu py-4 border-t-2 border-brand-orange">
+                        <a href="servicio-auditoria-cfd.html" class="block px-6 py-2 text-sm font-semibold hover:text-brand-orange transition">Auditoría Energética / Mecánica CFD</a>
+                    </div>
+                </div>
+                <div class="nav-item h-full flex items-center"><a href="soluciones.html" class="nav-link">Soluciones</a></div>
+                <div class="nav-item h-full flex items-center"><a href="productos.html" class="nav-link text-brand-orange">Productos</a></div>
+                <div class="nav-item h-full flex items-center relative group">
+                    <a href="#" class="nav-link flex items-center gap-1">Blog <i class="fas fa-chevron-down text-[10px] opacity-60"></i></a>
+                    <div class="absolute top-[100px] left-0 w-[260px] bg-white shadow-xl py-4 border-t-2 border-brand-orange opacity-0 invisible group-hover:opacity-100 group-hover:visible translate-y-2 group-hover:translate-y-0 transition-all duration-300 z-[100]">
+                        <a href="blog-reforma-calderas.html" class="block px-6 py-2 text-sm font-semibold hover:text-brand-orange transition">Reforma de Calderas de Biomasa</a>
+                        <a href="blog-optimiza-caldera.html" class="block px-6 py-2 text-sm font-semibold hover:text-brand-orange transition">Optimiza tu caldera</a>
+                        <a href="blog-corrida-financiera.html" class="block px-6 py-2 text-sm font-semibold hover:text-brand-orange transition">Corrida Financiera Personalizada</a>
+                        <a href="blog-checklist.html" class="block px-6 py-2 text-sm font-semibold hover:text-brand-orange transition">Checklist de Mantenimiento</a>
+                    </div>
+                </div>
+            </nav>
+            <div class="flex items-center space-x-6">
+                <!-- Language Picker -->
+                <div class="hidden lg:block relative group h-full">
+                    <button class="flex items-center gap-2 text-brand-dark hover:text-brand-orange font-bold text-xs uppercase tracking-widest transition-all">
+                        <i class="fas fa-globe text-sm"></i><span>ES</span>
+                    </button>
+                    <div class="absolute top-full right-0 mt-4 w-32 bg-white shadow-2xl rounded-sm py-2 border-t-2 border-brand-orange opacity-0 invisible group-hover:opacity-100 group-hover:visible translate-y-2 group-hover:translate-y-0 transition-all duration-300 z-50">
+                        <a href="#" class="block px-4 py-2 text-[10px] font-black uppercase tracking-widest text-brand-orange bg-orange-50/50">Español</a>
+                        <a href="en/products.html" class="block px-4 py-2 text-[10px] font-black uppercase tracking-widest text-gray-400 hover:text-brand-orange hover:bg-orange-50/30 transition-colors">English</a>
+                    </div>
+                </div>
+                <button onclick="toggleMobileMenu()" class="text-brand-dark text-2xl lg:hidden focus:outline-none"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="bg-[#191817] pt-32 pb-24 border-b-4 border-brand-orange">
+            <div class="max-w-[1280px] mx-auto px-6 text-center">
+                <span class="text-brand-orange font-black uppercase tracking-[0.3em] text-xs mb-4 block">Ingeniería & Fabricación</span>
+                <h1 class="text-5xl md:text-7xl font-black text-white uppercase tracking-tighter mb-8 leading-none">
+                    Catálogo de Productos
+                </h1>
+                <p class="text-gray-400 text-xl font-medium max-w-3xl mx-auto leading-relaxed">
+                    Fabricación bajo certificación ASME de equipos de alta presión y transferencia de calor para aplicaciones críticas.
+                </p>
+            </div>
+        </section>
+
+        <!-- Visual Products Grid -->
+        <section class="py-24 bg-white border-t-0">
+            <div class="max-w-[1280px] mx-auto px-6">
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <!-- Product 1: Escamizadores -->
+                    <div class="relative group h-[450px] overflow-hidden bg-brand-dark cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500">
+                        <img src="prod_escamizadores.jpg" alt="Escamizadores" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#191817] via-[#191817]/40 to-transparent pointer-events-none"></div>
+                        <div class="absolute bottom-0 left-0 p-8 w-full z-10 flex flex-col justify-end">
+                            <div class="w-10 h-1 bg-brand-orange mb-4 transform origin-left group-hover:scale-x-150 transition-transform duration-500"></div>
+                            <h3 class="text-white text-xl font-black uppercase tracking-tight leading-[1.2] group-hover:text-brand-orange transition-colors duration-500">
+                                Escamizadores
+                            </h3>
+                        </div>
+                    </div>
+
+                    <!-- Product 2: Intercambiadores -->
+                    <div class="relative group h-[450px] overflow-hidden bg-brand-dark cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500">
+                        <img src="prod_intercambiadores.jpg" alt="Fabricación de intercambiadores de calor" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#191817] via-[#191817]/60 to-transparent pointer-events-none"></div>
+                        <div class="absolute bottom-0 left-0 p-8 w-full z-10 flex flex-col justify-end">
+                            <div class="w-10 h-1 bg-brand-orange mb-4 transform origin-left group-hover:scale-x-150 transition-transform duration-500"></div>
+                            <h3 class="text-white text-lg font-black uppercase tracking-tight leading-[1.3] group-hover:text-brand-orange transition-colors duration-500">
+                                Fabricación de intercambiadores de calor y servicios de refluxado
+                            </h3>
+                        </div>
+                    </div>
+
+                    <!-- Product 3: Parrillas -->
+                    <div class="relative group h-[450px] overflow-hidden bg-brand-dark cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500">
+                        <img src="prod_parrillas.jpg" alt="Fabricación de Parrillas Viajeras" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#191817] via-[#191817]/40 to-transparent pointer-events-none"></div>
+                        <div class="absolute bottom-0 left-0 p-8 w-full z-10 flex flex-col justify-end">
+                            <div class="w-10 h-1 bg-brand-orange mb-4 transform origin-left group-hover:scale-x-150 transition-transform duration-500"></div>
+                            <h3 class="text-white text-xl font-black uppercase tracking-tight leading-[1.2] group-hover:text-brand-orange transition-colors duration-500">
+                                Fabricación de Parrillas Viajeras
+                            </h3>
+                        </div>
+                    </div>
+
+                    <!-- Product 4: Reactores presion -->
+                    <div class="relative group h-[450px] overflow-hidden bg-brand-dark cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500">
+                        <img src="prod_reactores_presion.jpg" alt="Reactores sujetos a presión" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#191817] via-[#191817]/50 to-transparent pointer-events-none"></div>
+                        <div class="absolute bottom-0 left-0 p-8 w-full z-10 flex flex-col justify-end">
+                            <div class="w-10 h-1 bg-brand-orange mb-4 transform origin-left group-hover:scale-x-150 transition-transform duration-500"></div>
+                            <h3 class="text-white text-lg font-black uppercase tracking-tight leading-[1.2] group-hover:text-brand-orange transition-colors duration-500">
+                                Fabricación de reactores sujetos a presión y temperatura
+                            </h3>
+                        </div>
+                    </div>
+
+                    <!-- Product 5: Rotores ventiladores -->
+                    <div class="relative group h-[450px] overflow-hidden bg-brand-dark cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500">
+                        <img src="prod_rotores.jpg" alt="Rotores para ventiladores" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#191817] via-[#191817]/60 to-transparent pointer-events-none"></div>
+                        <div class="absolute bottom-0 left-0 p-8 w-full z-10 flex flex-col justify-end">
+                            <div class="w-10 h-1 bg-brand-orange mb-4 transform origin-left group-hover:scale-x-150 transition-transform duration-500"></div>
+                            <h3 class="text-white text-[15px] font-black uppercase tracking-tight leading-[1.3] group-hover:text-brand-orange transition-colors duration-500">
+                                Fabricación de rotores para ventiladores de tiro inducido, con recubrimiento anti-desgaste
+                            </h3>
+                        </div>
+                    </div>
+
+                    <!-- Product 6: Tachos -->
+                    <div class="relative group h-[450px] overflow-hidden bg-brand-dark cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500">
+                        <img src="prod_tachos.jpg" alt="Fabricación de tachos y calandrias" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#191817] via-[#191817]/40 to-transparent pointer-events-none"></div>
+                        <div class="absolute bottom-0 left-0 p-8 w-full z-10 flex flex-col justify-end">
+                            <div class="w-10 h-1 bg-brand-orange mb-4 transform origin-left group-hover:scale-x-150 transition-transform duration-500"></div>
+                            <h3 class="text-white text-xl font-black uppercase tracking-tight leading-[1.2] group-hover:text-brand-orange transition-colors duration-500">
+                                Fabricación de tachos y calandrias
+                            </h3>
+                        </div>
+                    </div>
+
+                    <!-- Product 7: Reactores IAO -->
+                    <div class="relative group h-[450px] overflow-hidden bg-brand-dark cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500">
+                        <img src="prod_reactores_iao.jpg" alt="Reactores IAO" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#191817] via-[#191817]/40 to-transparent pointer-events-none"></div>
+                        <div class="absolute bottom-0 left-0 p-8 w-full z-10 flex flex-col justify-end">
+                            <div class="w-10 h-1 bg-brand-orange mb-4 transform origin-left group-hover:scale-x-150 transition-transform duration-500"></div>
+                            <h3 class="text-white text-xl font-black uppercase tracking-tight leading-[1.2] group-hover:text-brand-orange transition-colors duration-500">
+                                Reactores
+                            </h3>
+                        </div>
+                    </div>
+
+                    <!-- Product 8: Tanques Atmosfericos -->
+                    <div class="relative group h-[450px] overflow-hidden bg-brand-dark cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500">
+                        <img src="prod_tanques.jpg" alt="Tanques Atmosféricos IAO" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#191817] via-[#191817]/40 to-transparent pointer-events-none"></div>
+                        <div class="absolute bottom-0 left-0 p-8 w-full z-10 flex flex-col justify-end">
+                            <div class="w-10 h-1 bg-brand-orange mb-4 transform origin-left group-hover:scale-x-150 transition-transform duration-500"></div>
+                            <h3 class="text-white text-xl font-black uppercase tracking-tight leading-[1.2] group-hover:text-brand-orange transition-colors duration-500">
+                                Tanques Atmosféricos
+                            </h3>
+                        </div>
+                    </div>
+
+                    <!-- Product 9: Ventilador tiro forzado -->
+                    <div class="relative group h-[450px] overflow-hidden bg-brand-dark cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500">
+                        <img src="prod_ventilador_forzado.jpg" alt="Ventilador de tiro forzado IAO" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#191817] via-[#191817]/40 to-transparent pointer-events-none"></div>
+                        <div class="absolute bottom-0 left-0 p-8 w-full z-10 flex flex-col justify-end">
+                            <div class="w-10 h-1 bg-brand-orange mb-4 transform origin-left group-hover:scale-x-150 transition-transform duration-500"></div>
+                            <h3 class="text-white text-xl font-black uppercase tracking-tight leading-[1.2] group-hover:text-brand-orange transition-colors duration-500">
+                                Ventilador de Tiro Forzado
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Final -->
+        <section class="py-24 bg-[#191817] text-center">
+            <div class="max-w-2xl mx-auto px-6">
+                <h2 class="text-4xl font-black text-white uppercase tracking-tight mb-8 leading-none">¡Contáctanos!</h2>
+                <a href="https://wa.me/523323488430" target="_blank" class="inline-block bg-brand-orange text-white font-black uppercase tracking-widest px-10 py-5 hover:bg-white hover:text-brand-dark transition-all duration-300">Solicita una cotización <i class="fab fa-whatsapp ml-2"></i></a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark pt-24 pb-12">
+        <div class="max-w-[1280px] mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-16 mb-20 border-b border-white/5 pb-20 text-gray-500">
+                <div class="col-span-1 md:col-span-2">
+                    <img src="logo.jpg" class="h-16 w-auto bg-white p-1 rounded-sm grayscale invert mb-8">
+                    <p class="max-w-md text-sm leading-relaxed">Suministramos equipos industriales con los más altos estándares de calidad y seguridad, respaldados por certificaciones internacionales y un equipo de ingeniería líder en la región.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-black uppercase tracking-widest text-[10px] mb-8">Navegación</h4>
+                    <ul class="space-y-4 text-xs font-bold uppercase tracking-widest">
+                        <li><a href="quienes-somos.html" class="hover:text-brand-orange transition-colors">Compañía</a></li>
+                        <li><a href="soluciones.html" class="hover:text-brand-orange transition-colors">Soluciones</a></li>
+                        <li><a href="contacto.html" class="hover:text-brand-orange transition-colors">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-black uppercase tracking-widest text-[10px] mb-8">Contacto</h4>
+                    <p class="text-xs mb-4">Avenida del Cobre No. 8, Col. El Castillo, El Salto, Jalisco.</p>
+                    <p class="text-brand-orange font-bold text-xs"><a href="https://wa.me/523323488430">33 2348 8430</a></p>
+                </div>
+            </div>
+            <div class="text-[10px] text-gray-600 font-bold uppercase tracking-[0.3em] flex justify-between">
+                <p>&copy; 2026 IAO Ingeniería Avante de Occidente</p>
+                <div class="flex gap-6"><a href="#">Privacidad</a><a href="#">Términos</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('flex');
+        }
+    </script>
+    <div id="mobile-menu" class="fixed inset-0 bg-brand-dark z-[100] hidden flex-col p-8 overflow-y-auto">
+        <div class="flex justify-between items-center mb-16">
+            <img src="logo.jpg" class="h-12 w-auto bg-white p-1 rounded-sm grayscale invert">
+            <button onclick="toggleMobileMenu()" class="text-white text-3xl focus:outline-none"><i class="fas fa-times"></i></button>
+        </div>
+        <nav class="flex flex-col space-y-8">
+            <a href="index.html" class="text-2xl font-black text-white uppercase tracking-tighter hover:text-brand-orange transition-colors">Inicio</a>
+            <a href="quienes-somos.html" class="text-2xl font-black text-white uppercase tracking-tighter hover:text-brand-orange transition-colors">Compañía</a>
+            <a href="soluciones.html" class="text-2xl font-black text-white uppercase tracking-tighter hover:text-brand-orange transition-colors">Soluciones</a>
+            <a href="productos.html" class="text-2xl font-black text-brand-orange uppercase tracking-tighter transition-colors">Productos</a>
+            <a href="blog-checklist.html" class="text-2xl font-black text-white uppercase tracking-tighter hover:text-brand-orange transition-colors">Blog: Checklist</a>
+        </nav>
+    </div>
+</body>
+</html>
